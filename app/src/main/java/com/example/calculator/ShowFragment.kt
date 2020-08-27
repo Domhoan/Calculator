@@ -50,8 +50,14 @@ class ShowFragment : Fragment() {
             }
 
             "EQUAL" -> {
-                var kq : String? = null
-                tvShowKQ!!.text = kq
+                var mgr = ScriptEngineManager()
+                var engine  = mgr.getEngineByName("javascript")
+                try {
+                    var result : String = engine.eval(oldString).toString()
+                    tvShowKQ!!.text = result
+                } catch (se: ScriptException){
+                   // No problem
+                }
             }
 
             else -> {

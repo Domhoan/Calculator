@@ -69,7 +69,7 @@
         <Button
             android:id="@+id/btnMul"
             style="@style/ActionButtonStyle"
-            android:text="x" />
+            android:text="*" />
     </LinearLayout>
 
     <LinearLayout
